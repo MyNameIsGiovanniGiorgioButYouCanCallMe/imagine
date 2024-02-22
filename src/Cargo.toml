@@ -1,0 +1,2 @@
+[dependencies]
+structopt = "0.3"

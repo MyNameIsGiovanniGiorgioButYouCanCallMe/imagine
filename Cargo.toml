@@ -1,0 +1,43 @@
+[package]
+name = "imagine"
+version = "0.0.1"
+edition = "2021"
+rust-version = "1.76.0"
+authors = ["Giorgio <giorgio.faerber@gmx.de>"]
+description = "https://docs.rs/imagine"
+homepage = "..."
+readme = ""
+repository = ""
+license = "LICENSE"
+keywords = ["image", "images", "categorizing", "sorting", "pictures"]
+categories = ["command-line-utilities", "organization", "categorization"]
+include = ["/src", "/tests", "Cargo.toml"]
+exclude = [".*", "/target", "/debug"]
+
+
+[dependencies]
+#clap = "4.5.1"
+structopt = "0.3"
+
+#[build]
+#script = "src/build.rs"
+
+
+# [workspace]
+# members = [
+#   "src/categorize",
+#   "src/re-write",
+# ]
+
+[profile.bench]
+opt-level = 3
+
+[profile.test]
+opt-level = 1
+
+[profile.dev]
+opt-level = 0
+
+[profile.release]
+opt-level = 3
+
